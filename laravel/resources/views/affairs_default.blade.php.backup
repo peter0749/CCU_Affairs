@@ -1,0 +1,291 @@
+@extends('layouts.affairs_layout')
+@section('title','中正大學總務處')
+@section('metadata')
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">-->
+<!-- Fonts -->
+<link rel="stylesheet" href="{{URL::asset('/css/main_page.css')}}">
+<style> 
+#main_navbar {
+    background-image: url("{{URL::asset('/images/navbar_img_opt.png')}}");
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" defer></script>
+@endsection
+@section('header')
+<nav class="nav navbar-nav navbar-inverse" id="main_navbar">
+   <div class="container-fluid" >
+      <!--<div class="row-fluid"> -->
+      <div style="float:right">
+         <button type="button" class="navbar-toggle btn btn-default" data-toggle="collapse" data-target="#mobileNavbar">
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span> 
+         </button>
+      </div>
+      <div class="dropdown" style="float:left">
+         <a tabindex="0" data-submenu href="#" class="navbar-brand"><font style="color:white"><span><img id="ccu_logo" src="{{URL::asset('/images/ccu_logo.svg')}}" alt="ccu_logo.svg" /></span><span>國立中正大學</span><span class="caret"/></font></a> 
+         <ul class="dropdown-menu" id="ccu_sidebar">
+            <li><a href="{{URL::asset('/')}}">回總務處主頁面</a></li>
+            <li><a href="http://www.ccu.edu.tw/">回中正大學首頁</a></li>
+            <li class="dropdown-submenu">
+               <a tabindex="0" href="#">各處室連結</a>
+               <ul class="dropdown-menu">
+                  <li>
+                     <a target="_BLANK" href="http://140.123.13.101/">校長室</a>
+                  </li>
+                  <li>
+                     <a target="_BLANK" href="http://secretar.ccu.edu.tw/vicepre2.html">副校長室</a>
+                  </li>
+                  <li>
+                     <a target="_BLANK" href="http://secretar.ccu.edu.tw/main/">秘書室</a>
+                  </li>
+                  <li>
+                     <a target="_BLANK" href="http://oaa.ccu.edu.tw/oaa1/">教務處</a>
+                  </li>
+                  <li>
+                     <a target="_BLANK" href="http://studaffbh.ccu.edu.tw/">學務處</a>
+                  </li>
+                  <li>
+                     <a target="_BLANK" href="http://affairs.ccu.edu.tw/">總務處</a>
+                  </li>
+                  <li>
+                     <a target="_BLANK" href="http://www.rd.ccu.edu.tw/">研發處</a>
+                  </li>
+                  <li>
+                     <a target="_BLANK" href="http://oia.ccu.edu.tw/">國際處</a>
+                  </li>
+                  <li>
+                     <a target="_BLANK" href="http://sport.ccu.edu.tw/bin/home.php">體育中心</a>
+                  </li>
+                  <li>
+                     <a target="_BLANK" href="http://advising.ccu.edu.tw/">輔導中心</a>
+                  </li>
+                  <li>
+                     <a target="_BLANK" href="http://account.ccu.edu.tw/">主計室</a>
+                  </li>
+                  <li>
+                     <a target="_BLANK" href="http://person.ccu.edu.tw/">人事室</a>
+                  </li>
+                  <li>
+                     <a target="_BLANK" href="http://www.lib.ccu.edu.tw/">圖書館</a>
+                  </li>
+                  <li>
+                     <a target="_BLANK" href="https://center.ccu.edu.tw/">電算中心</a>
+                  </li>
+                  <li>
+                     <a target="_BLANK" href="http://www.ccunix.ccu.edu.tw/~deptehsc/">環安中心</a>
+                  </li>
+                  <li>
+                     <a target="_BLANK" href="http://cjlc.ccu.edu.tw/main.php">清江學習中心</a>
+                  </li>
+                  <li>
+                     <a target="_BLANK" href="http://secretar.ccu.edu.tw/secretar_web/organization_03.php">媒體暨公關中心</a>
+                  </li>
+                  <li>
+                     <a target="_BLANK" href="http://tecapp.ccu.edu.tw/">教學卓越計畫辦公室</a>
+                  </li>
+               </ul>
+            </li>
+         </ul>
+         </li>
+      </div>
+      <div class="collapse navbar-collapse" id="mobileNavbar">
+         <ul class="nav navbar-nav">
+            <li class="dropdown"><a href="{{URL::asset('/news/news')}}">最新消息<span class="caret"/></a>
+                <ul class="dropdown-menu dropdown-menu-right">
+                    <li><a href="{{URL::asset('/news/news')}}">最新消息</a></li>
+                    <li><a href="{{URL::asset('/news/loan')}}">廠商服務</a></li>
+                    <li><a href="{{URL::asset('/news/tables')}}">表單下載</a></li>
+                    <li><a href="{{URL::asset('/news/sop')}}">相關事務流程</a></li>
+                    <li><a href="{{URL::asset('/news/gallery')}}">總務處會議紀錄</a></li>
+                    <li><a href="{{URL::asset('/news/plants')}}">校園植物開花資訊</a></li>
+                </ul>
+            </li>
+            <!--li><a href="{{URL::asset('/nyan')}}">測試頁籤</a></li-->
+            <li class="dropdown">
+               <a href="{{URL::asset('/leader/news')}}">總務長室<span class="caret"></span></a>
+               <ul class="dropdown-menu dropdown-menu-right">
+                  <li><a href="{{URL::asset('/leader/news')}}">最新公告</a></li>
+                  <li><a href="{{URL::asset('/leader/info')}}">總務長簡歷</a></li>
+                  <li><a href="{{URL::asset('/leader/history')}}">歷任總務長</a></li>
+                  <li><a href="{{URL::asset('/leader/people')}}">編制與分工</a></li>
+                  <li><a href="{{URL::asset('/leader/think')}}">工作理念</a></li>
+                  <li><a href="{{URL::asset('/images/office_map.jpg')}}">地理位置</a></li>
+                  <!-- 哇x ，以前寫舊版網頁的人，圖片也是複製貼上的欸 OuO -->
+                  <li><a href="{{URL::asset('/leader/tables')}}">表單下載</a></li>
+               </ul>
+            </li>
+            <li class="dropdown">
+               <a  href="{{URL::asset('/affair/news')}}">事務組<span class="caret"></span></a>
+               <ul class="dropdown-menu dropdown-menu-right">
+                  <li><a href="{{URL::asset('/affair/news')}}">最新公告</a></li>
+                  <li><a href="http://miswww1.cc.ccu.edu.tw/hostel/" target="_blank">致遠樓線上訂房</a></li>
+                  <li><a href="{{URL::asset('/affair/ret')}}">退撥公告</a></li>
+                  <li><a href="{{URL::asset('/affair/task')}}">業務職掌</a></li>
+                  <li><a href="{{URL::asset('/affair/people')}}">編制與分工</a></li>
+                  <li><a href="{{URL::asset('/affair/routine')}}">相關事務流程</a></li>
+                  <li><a href="{{URL::asset('/affair/regu')}}">相關法規要點</a></li>
+                  <li><a href="{{URL::asset('/affair/faq')}}">常見問題</a></li>
+                  <li><a href="{{URL::asset('/affair/tables')}}">表單下載</a></li>
+                  <li><a href="{{URL::asset('/affair/links')}}">相關連結</a></li>
+                  <li><a href="{{URL::asset('/affair/taipei')}}">台北連絡處</a></li>
+                  <li><a href="{{URL::asset('/images/office_map.jpg')}}">地理位置</a></li>
+                  <li><a href="http://140.123.35.5/~yee/Affair/buy/index.php">中正科研採購資訊網</a></li>
+                  <!-- 這裡的連結以後要改掉 -->
+               </ul>
+            </li>
+            <li class="dropdown">
+               <a  href="{{URL::asset('/cashier/news')}}">出納組<span class="caret"></span></a>
+               <ul class="dropdown-menu dropdown-menu-right">
+                  <li><a href="{{URL::asset('/cashier/news')}}">最新公告</a></li>
+                  <li><a target="_blank" href="https://miswww1.ccu.edu.tw/salarysyspg/">教職員薪資所得查詢系統</a></li>
+                  <li><a href="{{URL::asset('/cashier/ret')}}">退撥公告</a></li>
+                  <li><a href="http://miswww1.cc.ccu.edu.tw/gensyspg/">廠商服務</a></li>
+                  <li><a href="http://www.ccunix.ccu.edu.tw/~cashier/105學年度國立中正大學學雜費收費標準.pdf">學雜費收費標準</a></li>
+                  <li><a href="http://www.ccunix.ccu.edu.tw/%7Ecashier/ccuindex_tuition.htm">學雜費補單、繳費</a></li>
+                  <li><a href="{{URL::asset('/cashier/task')}}">業務職掌</a></li>
+                  <li><a href="{{URL::asset('/cashier/people')}}">編制與分工</a></li>
+                  <li><a href="{{URL::asset('/cashier/routine')}}">相關事務流程</a></li>
+                  <li><a href="{{URL::asset('/cashier/faq')}}">常見問題</a></li>
+                  <li><a href="{{URL::asset('/cashier/remittance')}}">匯款帳戶資料</a></li>
+                  <li><a href="{{URL::asset('/cashier/tables')}}">表單下載</a></li>
+                  <li><a href="{{URL::asset('/cashier/link')}}">相關連結</a></li>
+                  <li><a href="{{URL::asset('/images/office_map.jpg')}}">地理位置</a></li>
+               </ul>
+            </li>
+            <li class="dropdown">
+               <a  href="{{URL::asset('/property/news')}}">保管組<span class="caret"></span></a>
+               <ul class="dropdown-menu dropdown-menu-right">
+                  <li><a href="{{URL::asset('/property/news')}}">最新公告</a></li>
+                  <li><a target="_blank" href="https://miswww1.ccu.edu.tw/consume/">物品管理系統</a></li>
+                  <li><a target="_blank" href="http://140.123.37.55/clothes/">學位服借用管理系統</a></li>
+                  <li><a target="_blank" href="https://miswww1.ccu.edu.tw/AMS/">財產管理網路服務系統</a></li>
+                  <li><a href="{{URL::asset('/property/degreesuit')}}">學位服樣式及穿法簡介</a></li>
+                  <li><a href="{{URL::asset('/property/task')}}">業務職掌</a></li>
+                  <li><a href="{{URL::asset('/property/people')}}">編制與分工</a></li>
+                  <li><a href="{{URL::asset('/property/routine')}}">相關事務流程</a></li>
+                  <li><a href="{{URL::asset('/property/regu')}}">相關法規要點</a></li>
+                  <li><a href="{{URL::asset('/property/faq')}}">常見問題</a></li>
+                  <li><a href="{{URL::asset('/property/tables')}}">表單下載</a></li>
+                  <li><a href="{{URL::asset('/property/dormrecord')}}">宿舍調配委員會會議記錄</a></li>
+                  <li><a href="{{URL::asset('/property/dormmeet')}}">宿舍管理委員會會議記錄</a></li>
+                  <li><a href="{{URL::asset('/property/dormaffair')}}">荊竹園專區</a></li>
+                  <li><a href="{{URL::asset('/property/link')}}">相關連結</a></li>
+               </ul>
+            </li>
+            <li class="dropdown">
+               <a  href="{{URL::asset('/construction/news')}}">營繕組<span class="caret"></span></a>
+               <ul class="dropdown-menu dropdown-menu-right">
+                  <li><a href="{{URL::asset('/construction/news')}}">最新公告</a></li>
+                  <li><a href="{{URL::asset('/construction/task')}}">業務職掌</a></li>
+                  <li><a href="{{URL::asset('/construction/people')}}">編制與分工</a></li>
+                  <li><a href="{{URL::asset('/construction/routine')}}">相關事務流程</a></li>
+                  <li><a href="{{URL::asset('/construction/regu')}}">相關法規要點</a></li>
+                  <li><a href="{{URL::asset('/construction/public')}}">公共藝術</a></li>
+                  <li><a href="{{URL::asset('/construction/economize')}}">節能項目</a></li>
+                  <li><a href="{{URL::asset('/construction/faq')}}">常見問題</a></li>
+                  <li><a href="{{URL::asset('/construction/tables')}}">表單下載</a></li>
+                  <li><a href="{{URL::asset('/construction/link')}}">相關連結</a></li>
+                  <li><a href="{{URL::asset('/images/office_map.jpg')}}">地理位置</a></li>
+               </ul>
+            </li>
+            <li class="dropdown">
+               <a  href="{{URL::asset('/security/news')}}">駐警隊<span class="caret"></span></a>
+               <ul class="dropdown-menu dropdown-menu-right">
+                  <li><a href="{{URL::asset('/security/news')}}">最新公告</a></li>
+                  <li><a href="{{URL::asset('/security/task')}}">業務職掌</a></li>
+                  <li><a href="{{URL::asset('/security/people')}}">編制與分工</a></li>
+                  <li><a href="{{URL::asset('/security/routine')}}">相關事務流程</a></li>
+                  <li><a href="{{URL::asset('/security/regu')}}">相關法規要點</a></li>
+                  <li><a href="{{URL::asset('/security/car')}}">車管業務</a></li>
+                  <li><a href="{{URL::asset('/security/faq')}}">常見問題</a></li>
+                  <li><a href="{{URL::asset('/security/tables')}}">表單下載</a></li>
+                  <li><a href="{{URL::asset('/security/link')}}">相關連結</a></li>
+                  <li><a href="{{URL::asset('/images/office_map.jpg')}}">地理位置</a></li>
+               </ul>
+            </li>
+            <li class="dropdown">
+               <a  href="{{URL::asset('/dining/news')}}">民服會<span class="caret"></span></a>
+               <ul class="dropdown-menu dropdown-menu-right">
+                  <li><a href="{{URL::asset('/dining/news')}}">最新公告</a></li>
+                  <li><a href="{{URL::asset('/dining/task')}}">業務職掌</a></li>
+                  <li><a href="{{URL::asset('/dining/people')}}">編制與分工</a></li>
+                  <li><a href="{{URL::asset('/dining/routine')}}">相關事務流程</a></li>
+                  <li><a href="{{URL::asset('/dining/regu')}}">相關法規要點</a></li>
+                  <li><a href="#">賣點簡介</a></li>
+                  <li><a href="{{URL::asset('/dining/faq')}}">常見問題</a></li>
+                  <li><a href="{{URL::asset('/dining/diet')}}">餐飲衛生</a></li>
+                  <li><a href="{{URL::asset('/dining/tables')}}">表單下載</a></li>
+                  <li><a href="{{URL::asset('/dining/link')}}">相關連結</a></li>
+                  <li><a target="_blank" href="https://drive.google.com/open?id=1DvpRN2eQIZDv5pg8qKQtI5cn7SEP_Vhwd9S5RICSlJA">特約廠商一覽</a></li>
+                  <li><a href="#">食物祕笈</a></li>
+                  <li><a target="_BLANK" href="https://www.facebook.com/CCUCSC/">臉書連結</a></li>
+                  <li><a href="{{URL::asset('/images/office_map.jpg')}}">地理位置</a></li>
+               </ul>
+            </li>
+         </ul>
+         <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://140.123.35.5/~yee/manager/admin-login.htm"><span class="glyphicon glyphicon-user"></span> 管理後台</a></li>
+         </ul>
+      </div>
+   </div>
+</nav>
+<div>
+   <img src="{{URL::asset('/images/title.jpg')}}" class="img-responsive center-block" id="affair_mountain"/>
+</div>
+@endsection
+@section('sidebar')
+    <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Start Bootstrap
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Dashboard</a>
+                </li>
+                <li>
+                    <a href="#">Shortcuts</a>
+                </li>
+                <li>
+                    <a href="#">Overview</a>
+                </li>
+                <li>
+                    <a href="#">Events</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+@endsection
+@section('footer')
+<div>
+   <p>
+   <center><font size="-1">網頁如有問題，請連絡<a href="mailto:general@ccu.edu.tw ">general@ccu.edu.tw</a> 嚴振賓</font></center>
+   <p>
+   <center>
+   <!-- javascript show the last modify date  / -->
+   <font size="-1">
+      <script language="JavaScript">
+         var lastModDate = new Date(document.lastModified);
+         document.write("最近檢視維護日：" +lastModDate.toDateString());
+      </script>
+   </font>
+   <center>
+   <!-- javascript --> 
+</div>
+@endsection

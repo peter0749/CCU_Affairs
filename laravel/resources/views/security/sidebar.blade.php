@@ -1,0 +1,10 @@
+<li><a href="{{URL::asset('/security/news')}}">最新公告</a></li>
+<li><a href="{{URL::asset('/security/task')}}">業務職掌</a></li>
+<li><a href="{{URL::asset('/security/people')}}">編制與分工</a></li>
+<li><a href="{{URL::asset('/security/routine')}}">相關事務流程</a></li>
+<li><a href="{{URL::asset('/security/regu')}}">相關法規要點</a></li>
+<li><a href="{{URL::asset('/security/car')}}">車管業務</a></li>
+<li><a href="{{URL::asset('/security/faq')}}">常見問題</a></li>
+<li><a href="{{URL::asset('/security/tables')}}">表單下載</a></li>
+<li><a href="{{URL::asset('/security/link')}}">相關連結</a></li>
+<li><a href="{{URL::asset('/images/office_map.jpg')}}">地理位置</a></li>
